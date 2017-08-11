@@ -1,0 +1,24 @@
+section.inverted h1, section.inverted h2, section.inverted h3, section.inverted h4, section.inverted h5, section.inverted h6, section.inverted p, section.inverted ol {
+color: #fdf6e3;
+}
+
+.img-left div.slide-background.present {
+    background-position: 0 0;
+}
+
+
+table.custom {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+table.custom td, table.custom th {
+    border: 1px solid;
+}
+
+/* Custom decorations. */
+.formaltitle {
+    background-color: #dddddd;
+    width: 100%;
+
+}

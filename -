@@ -1,0 +1,686 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Thesis Defense - Robert Yi</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-background="#333">
+            <h1>Emergent geometries of groundwater-fed rivers</h1>
+            <hr>
+            <div>
+                Robert Yi<br>
+                <p style="font-size:61.8%"> 
+                Thesis Defense<br>
+                MIT, EAPS<br>
+                July 20, 2017
+                </p>
+            </div>
+        </section>
+        
+        <section data-background="./images/bristol1.png" data-state="img-left" data-background-size="contain">        
+        </section>
+        <section data-background="./images/bristol_grey.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers_waterflow.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers_growth.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers_1.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers_zoom.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_grey_rivers_zoom_unboxed.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/bristol_zoom_slice.png" data-state="img-left" data-background-size="contain">
+        <div style="position:relative; width:600px; height: 450px; margin: 0 auto;">
+            <img class="fragment" src="./images/cartoon-groundwater_1_ground.png" width="600px" style="position:absolute; top:0; left:0">
+            <img class="fragment" src="./images/cartoon-groundwater_2_rain.png" width="600px" style="position:absolute; top:0; left:0">
+            <img class="fragment" src="./images/cartoon-groundwater_3_gwtable.png" width="600px" style="position:absolute; top:0; left:0">
+            <img class="fragment" src="./images/cartoon-groundwater_4_flow.png" width="600px" style="position:absolute; top:0; left:0">
+            <div class="fragment fade-in"><img class="fragment fade-out" src="./images/stream_flip.gif" style="position:absolute; top: 50px; left: 400px; width: 300px"></div>
+
+            <img class="fragment" src="./images/cartoon-groundwater_5_growthdir.png" width="600px" style="position:absolute; top:0; left:0">
+
+        </div>
+        </section>
+
+        <!-- Background -->
+        <section data-background="./images/bristol_confluence.png">
+        </section>
+        <section data-background="./images/bristol_lip.png">
+        </section>
+        <section data-background="./images/GoogleEarth-BristolPhoto.png" data-background-size="contain">
+        </section>
+        
+        <section data-background="./images/outline_0.png" data-state="img-left" data-background-size="contain"></section>
+
+        <section data-background="./images/outline_1.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/outline_2.png" data-state="img-left" data-background-size="contain"></section>
+        <section data-background="./images/outline_3.png" data-state="img-left" data-background-size="contain"></section>
+
+
+
+        <!-- Chapter 1: valley -->
+        <section data-background="#333">
+            <h1>What shapes valleys?</h1>
+            <hr>
+            <p style="font-size:80%"><i>"The whole surface of the earth seemed changed, melting and flowing under my eyes."</i></p>
+            <p align="right" style="font-size:60%">H.G. Wells, <u>The Time Machine</u></p>
+        </section>
+        
+        <section>
+            <h2>What shapes these?</h2>
+            <img width="700px" src="./images/valley_lidar_topo_spring.png"> 
+            <h3 class="fragment">What processes are involved?</h3>
+        </section>
+
+        <section data-background="./images/valley_picture.png" data-background-size="contain"> 
+            <h2 style="color:#fff; padding: 5px; background-color: #000">Primary process: soil falls into a stream</h2>
+            <div class="review">Review</div> 
+
+            <div data-fragment-index="1" class="fragment" style="float: left; background-color:#000; opacity:0.8; width:550px; color: #fff; padding: 3px 20px; text-align: left">
+                <p data-fragment-index="1" class="fragment" style="font-size:80%">Processes involved: <i>rain, animals burrowing, vegetative life cycles</i> </p>
+                <p class="fragment" data-fragment-index="2">At shallow slopes, these processes are approximately linearly diffusive.<br><span style="font-size:70%">Culling 1960, 1963</span></p>
+            </div>
+
+            <div data-fragment-index="3" class="fragment" style="float:right; background-color:#fff; opacity: 0.8; width:300px; padding: 3px 20px; text-align: left">
+            Mathematically:<br><hr>
+            <p style="font-size:60%">For a topographic elevation <i>H</i>:</p>
+            <img src="./images/equations/H0.png" style="width:200px"><br>
+            <img src="./images/equations/topo_diff.png" style="width:100px">  
+            <p style="font-size:60%" class="fragment">Diffusive valleys have been studied.<br><span style="font-size:80%"> Pelletier and Perron (2012)</span></p>
+            </div>
+        </section>
+       
+        <section>
+            <h2>The distance to water table also creates a variable diffusivity, <i>D</i>.</h2>
+            <div style="width:100%; text-align: left; font-size:80%">
+            <ul>
+            <li class="fragment">Diffusivity <i>D</i> measures the rate of spread.</li>
+            <li class="fragment">Diffusivity is lower when soil is wet.</li> 
+            </ul>
+            </div>
+            
+
+            <div style="width: 700px; position: relative; height:500px; margin: 0 auto;">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/cartoonphysical_0.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/cartoonphysical_1.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/cartoonphysical_2_dry.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/cartoonphysical_3_edge.png">
+
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Full model: diffusive soil with a valley edge</h2>
+        
+            <div style="width: 700px; position: relative; height:500px; margin: 0 auto;">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/valley_diagram_0.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/valley_diagram_1_vel.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/valley_diagram_2_stream.png">
+            <img class="fragment" style="position: absolute; top:0; left:0; width:700px" src="./images/valley_diagram_3_full.png">
+
+            </div>
+
+       
+        </section>
+        <section>
+            <h2>Theoretical shape</h2>
+            <p>We can solve this model analytically, giving us a valley shape:</p>
+            <img width="700px" src="./images/perspective.jpg">
+        </section>
+
+
+        <section>
+            <h2>Our theory fits slow-growing valleys</h2>
+            <p style="font-size:60%">Four different slow-growing valley heads (red) overlaying theory (blue).</p>
+            <img width="700px" src="./images/contours_good.png">
+        </section>
+
+        <section>
+            <h2>Our theory fits slow-growing valleys</h2>
+            <div style="float:left; width:400px; margin-left: 50px">
+            <img width="450px" src="./images/contours_good.png">
+            </div>
+            <div class="fragment" style="background-color: #ddd; float:right; width:400px; margin-left: 50px">
+            <p>Fast-growing valley.</p>
+            <img width="450px" src="./images/contour278.png">
+            </div>
+        </section>
+
+        <section data-background="#eee">
+            <h2><i>Summary</i></h2>   
+            <hr>
+            <ul> 
+                <li class="fragment" style="color:#999">Topography is diffusive.</li>
+                <li class="fragment">Height-dependent diffusivity creates a valley edge. </li>
+                <li class="fragment">A model incorporating these features fits slow-growing valleys.</li>
+            </ul>
+        </section>
+       
+
+        <!-- Chapter 2: lateral migration -->
+        <section data-background="./images/outline_chapter2.png" data-background-size="contain"></section>
+        <section data-background="#333">
+        <h1>How do streams migrate after growth?</h1>
+        <hr>
+        </section>
+
+        <section>
+            <h2>How do streams migrate after growth?</h2>
+            <p style="font-size:80%">The current position of the stream does not encode the history of its growth.</p>
+            <div style="position:relative; width:800px; height: 180px; margin: 0 auto;">
+                <img width="800px" data-fragment-index="0" class="fragment" src="./images/meanderingriver_0.png" style="position:absolute; top:0; left:0">
+                <img width="800px" data-fragment-index="1" class="fragment" src="./images/meanderingriver_1.png" style="position:absolute; top:0; left:0">
+                <img width="800px" data-fragment-index="2" class="fragment" src="./images/meanderingriver_2.png" style="position:absolute; top:0; left:0">
+                <img width="800px" data-fragment-index="3" class="fragment" src="./images/meanderingriver_question.png" style="position:absolute; top:0; left:0">
+            </div>
+            <p class="fragment" data-fragment-index="4"><u>Three parts:</u></p>
+            <span class="fragment" data-fragment-index="5"><i>How do streams grow?</i></span><br>
+            <span class="fragment" data-fragment-index="6"><i>What do they actually look like?</i></span><br>
+            <span class="fragment" data-fragment-index="7"><i>What mechanism is responsible?</i></span>
+        </section>
+        
+        <section data-background="#666">
+            <h2>How do streams grow?</h2>
+            <div class="review" style="right:100px">Review</div>
+        </section>
+
+        <section>
+            <h2>The groundwater field drives growth</h2>
+            <div class="review">Review</div>
+            <div style="float:left;" class="fragment">
+            <img src="./images/groundwater_diagram.png" width="600px">
+            </div>
+            
+            <div style="float:right; text-align: left; width:300px; font-size:60%">
+            <p class="fragment">
+            If flow is roughly horizontal, <i>h</i> solves:<br>
+            <img width="200px" src="./images/equations/laplace.png"><br>
+            <span style="font-size:80%">
+            Darcy 1856, Dupuit 1863, Bear 1972, Devauchelle et al. 2012, Petroff et al. 2013
+            </span>
+            </p>
+            </div>
+
+            <div class="fragment" style="width:100%; clear: both">
+            We can solve this around boundary conditions we care about to obtain the groundwater <i>field</i>.  
+            </div>
+        </section>
+
+        <section>
+            <h2>Streams grow in a direction that symmetrizes the groundwater field</h2>
+            <span style="font-size:60%">Cohen et al. 2015</span>
+            <div class="review">Review</div>
+            <div style="position:relative; width:600px; height: 500px; margin: 0 auto; float: left">
+                <img width="600px" data-fragment-index="0" class="fragment" src="./images/asymm_field_0.png" style="position:absolute; top:0; left:0">
+                <img width="600px" data-fragment-index="1" class="fragment" src="./images/asymm_field.png" style="position:absolute; top:0; left:0">
+            </div>
+
+            <div style="float: right; width:280px; text-align: left; font-size: 80%">
+                <p class="fragment" data-fragment-index="0">Contour lines of a groundwater table (black) around a stream (blue).</p>
+                <p class="fragment" data-fragment-index="1">The red line indicates the growth trajectory that maximizes symmetry.</p>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>This symmetric growth predicts 72&#176; confluence angle</h2> 
+            <div class="review">Review</div>
+            <img width="400px" style="float:left" src="./images/fishtail2.png">
+            <div style="float:right; width:450px; font-size:90%" class="fragment">
+            In a split-tip geometry, streams will grow to form an angle of 72&#176; between them.<br>
+            <span style="font-size:70%">Devauchelle et al. 2012, Devauchelle et al. 2017</span>
+            </div>
+        </section>
+        
+        <section data-background="#666">
+            <h2>What do they actually look like?</h2>
+        </section>
+
+        <section data-background="./images/realconfluence.jpg">
+        <h3 style="background-color: #fff; opacity: 0.8">Now that we know how they grow, what do they actually look like?</h3>
+        </section>
+        <section>
+        <img width="500px" src="./images/cluster_single_branch.png"> 
+        </section>
+        <section>
+        <img width="500px" src="./images/cluster_6m_single.png">
+        </section>
+        <section>
+            <img width="500px" src="./images/cluster_6m_few.png">
+        </section>
+        <section>
+        <img width="500px" src="./images/cluster_6m_grey.png">
+        </section>
+        <section>
+        <h2>Average confluence shape deviates from 72&#176</h2>
+        <div style="font-size: 80%; text-align: left; float:left; width:430px" >
+        <img width="430px" src="./images/cluster_final.png">
+        The average shape (light blue) differs from the 72&#176; shape predicted by theory (red lines). 
+        <p style="font-size:80%">Dark blue region indicates standard deviation.</p>
+        </div>
+        <div class="fragment" data-fragment-index="1" style="font-size: 80%; text-align: left; float:right; width:430px" >
+        <img width="430px" src="./images/cluster_polar.png">
+        <p style="font-size:80%">Polar coordinates of left plot, with junction at origin.</p>
+        <p class="fragment" data-fragment-index="2">Opening angle ~120&#176;.</p>
+        </div>
+        </section>
+       
+        <section data-background="#666">
+            <h2>What mechanism is responsible?</h2>
+        </section>
+
+        <section>
+            <h2>The downstream field is asymmetric</h2>
+            <div style="position:relative; width:600px; height: 500px; margin: 0 auto; float: left">
+                    <img width="600px" data-fragment-index="0" class="fragment" src="./images/fluxjump_72_0.png" style="position:absolute; top:0; left:0">
+                    <img width="600px" data-fragment-index="1" class="fragment" src="./images/fluxjump_72_1.png" style="position:absolute; top:0; left:0">
+                    <img width="600px" data-fragment-index="2" class="fragment" src="./images/fluxjump_72_2.png" style="position:absolute; top:0; left:0">
+                    <img width="700px" data-fragment-index="3" class="fragment" src="./images/fluxjump_120.png" style="position:absolute; top:0; left:0">
+            </div> 
+                
+            <div style="float:right; width: 290px; font-size: 70%; text-align: left">
+            <p class="fragment" data-fragment-index="1">Streamlines are colored for the side of the stream they enter into.</p> 
+
+            <p class="fragment" data-fragment-index="2" style="background-color:#ddd; padding: 5px">Shaded region indicates <u>flux jump</u> <i>[Q]</i> (the difference in fluxes to each side).</p>
+
+            <p class="fragment" data-fragment-index="3">Widening the angle results in greater flux from inside the angle.</p>
+            </div>
+
+        </section>
+        
+        <section>
+        <h2>Migration in response to flux jump produces a 120&#176; junction</h2>
+        <div style="float:left; width:50%">
+        Image of symmetric 120 field. 
+        </div>
+        <div style="float:right; width:50%; text-align: left; font-size:80%">
+        <p class="fragment">When all three branches are equally long (e.g. infinitely close to junction), 120&#176; sets <i>[Q]=0</i>.</p>
+        <p class="fragment">A simulation of how this might happen.</p>
+        </div>
+        </section>
+        
+        <section>
+            <h2>What about network-wide fluctuations?</h2>
+            <div class="fragment" style="font-size:60%">
+            <img width="400px" src="./images/meanderingriver_labeled.png"><br>
+            (the stream shown before, colored by curvature)
+            </div> 
+            <br>
+            <div class="fragment">
+                <div style="float:left">
+                <img width="500px" src="./images/ps3orders.png"></div>
+                
+                <div style="float:right; width: 400px; text-align: left">
+                <p>Agrees with the length scale of relaxation. </p>
+                <img src="./images/cluster_polar.png" width="300px">
+                </div>
+            </div>
+        </section>
+
+        <section data-background="#eee">
+            <h2><i>Summary</i></h2>   
+            <hr>
+            <ul> 
+                <li class="fragment" style="color:#999">The groundwater field is diffusive.</li>
+                <li class="fragment">Stream junctions favor a 120&#176; angle.</li>
+                <li class="fragment">Network-wide curvature fluctuations may be a result of the same mechanism.</li>
+            </ul>
+        </section>
+
+        <!-- Chapter 3: network -->
+        <section data-background="#333">
+            <h1>What does basin geometry tell us about climate?</h1>
+            <hr>
+            <p style="font-size:80%"><i>"Everything is simple and neat--except, of course, the world."</i></p>
+            <p align="right" style="font-size:60%">Nigel Goldenfeld and Leo Kadanoff, <i>Simple Lessons from Complexity</i></p>
+        </section>
+      
+        <section>
+            <h2>72&#176; appears in humid environments</h2>
+            <div class="review">Review</div>
+            <div style="float:left; width:450px">
+            <img width="400px" src="./images/fishtail2.png">
+            </div>
+            <div style="float:right; width:400px; font-size:80%;">
+            <ul>
+                <li class="fragment">Branching angles in Bristol, Florida are 72&#176; on average.<br><span style="font-size:70%">Devauchelle et al. (2012)</span></li>
+                <li class="fragment">Humid environments: ~72&#176;<br>Arid environments: ~45&#176;<br><span style="font-size:70%">Seybold et al. (2017)</span></li>
+
+                <li class="fragment"><i>Does this mean climate also affects basin geometry?</i></li>
+            </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>What can angle tell us about basin geometry?</h3>
+            <div style="position:relative; width:650px; height:600px; margin: 0 auto;"> 
+            <img style="position:absolute; top:0; left:0;" width="600px" src="./images/cartoon_network_72_0.png">
+            <img class="fragment" style="position:absolute; top:0; left:0;" width="600px" src="./images/cartoon_network_72_1.png">
+            <img class="fragment" style="position:absolute; top:0; left:0;" width="600px" src="./images/cartoon_network_72_2.png">
+            </div>
+        </section>
+
+        <section>
+            <h2>Branching angle defines an aspect ratio</h2>
+            
+            <div style="float:left; width:450px">
+             <img height="450px" src="./images/cartoon_network_72_labeled_crop.png"><br>
+             
+            <img width="200px" src="./images/equations/pi5.png">
+             </div>
+
+            <div style="float:right; width:450px;">
+             <img height="450px" src="./images/cartoon_network_45_labeled_crop.png"><br>
+            <img width="200px" src="./images/equations/pi8.png">
+             </div>
+            
+        </section>
+        
+        <section>
+        <h2>Aspect ratio</h2>
+        <div style="float:left"><img width="450px" src="./images/cartoon_aspect_ratio_single_basin.png"></div>
+        <div style="float:right; width:450px; font-size:80%">
+        <p>In real networks,<br> <img height="50px" src="./images/equations/area_lengthlength"></p>
+        
+        <p class="fragment">Therefore, we can rewrite this aspect ratio as <br><img height="50px" src="./images/equations/aspectratio.png"><br>
+        which corresponds to the ratio of basin width to basin length.</p>
+        </div>
+        </section>
+
+        <section>
+            <h3>Aridity index and aspect ratio seem related</h3>
+            <div width="100%" style="display:inline-block">
+            <img style="float:left" width="440px" src="./images/map_ai.png">
+            <img style="float:right" width="440px" src="./images/map_aspect.png">
+            </div>
+
+            <hr>
+            <p>AI (aridity index) = precipitation / potential evapotranspiration</p>
+            <div class="fragment" style="font-size:80;">humid: <i>AI &gt; 1</i><br>dry: <i>AI &lt; 1</i></p>
+        </section>
+
+        <section>
+            <h2>Humid basins are fatter</h2>
+            <div style="float:left; margin-left: 50px"><img width="350px" src="./images/cartoon_aspect_ratio.png"></div>
+            <div style="float:right; margin-right:50px"><img width="450px" src="./images/aspect_ratio.png"></div>
+            
+            <div class="fragment" style="font-size:70%; width:100%">
+            <span style="background-color:#ffcc00">Yellow</span> line = &pi;/8 &#8776; .39 &nbsp; &nbsp;<span style="background-color:#00ccff">Blue</span> line = &pi;/5 &#8776; .63
+            </div>
+        </section>
+       
+                
+        <section>
+            <h2>Self-affinity of river basins</h2>
+            <div style="width:450px; float:left; font-size: 60%">
+                <div style="position:relative; width:350px; height: 210px; margin: 0 auto;">
+                    <img width="350px" class="fragment fade-out" data-fragment-index="0" src="./images/cartoon_hack_selfsimilar_nored.png" style="position:absolute; top:0; left:0">
+                    <img width="350px" class="fragment fade-in" data-fragment-index="0"src="./images/cartoon_hack_selfsimilar.png" style="position:absolute; top:0; left:0">
+                </div><br>
+                Self-similar <span class="fragment" data-fragment-index="0"><i>h = 1/2</i></span><br>
+                <hr>
+
+                <img width="350px" src="./images/cartoon_hack_selfaffine.png"><br>
+                Self-affine <span class="fragment" data-fragment-index="0"><i>h > 1/2</i></span>
+            </div>
+            <div style="text-align:left; width:450px; float:right; font-size:80%">
+                Sometimes, river basins aren't self-similar, and <br>
+                <img height="50px" src="./images/equations/notscale.png"><br>
+
+                <div class="fragment" data-fragment-index="0">
+                    A popular measure of self-similarity is how mainstream length <i>l</i> scales with area <i>A</i> (Hack's law):<br>
+
+                    <img height="50px" src="./images/equations/hackslaw.png"></p>
+
+                    where <br>
+                    <img height="50px" src="./images/equations/dlaw.png"><br>
+
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section>
+            <h2>Universality classes of river networks</h2>
+            
+            <div style="float:left; width:450px">
+            <img height="30px" src="./images/equations/hackslaw.png"><br>
+            <img height="45px" src="./images/equations/dlaw.png"><br>
+            </div>
+            <div style="float:right; width:450px">
+            <p><i style="color:#333">h</i> and <i style="color:#333">d</i> define a <i>universality class</i> of river network.</p> 
+            </div>
+
+            <div width="100%">
+            <table width="100%" class="fragment">
+            <tr style="background-color:#333; color: #fff">
+            <td>Universality class</td>
+            <td>h</td>
+            <td>d</td>
+            </tr>
+
+            <tr>
+            <td>Self-similar</td>
+            <td>1/2</td>
+            <td>1</td>
+            </tr>
+            
+            <tr>
+            <td>Undirected random network<br>
+                <img src="./images/spanning_tree.png" width="100px"> 
+            </td>
+            <td>5/8</td>
+            <td>5/4<td>
+            </tr>
+            </table>
+            </div>
+
+        </section>
+        
+        <section>
+            <h2>Scaling exponents as function of aridity</h2>
+                <table width="700px" style="font-size:70%">
+                
+                <tr style="background-color:#333; color: #fff">
+                <td>Universality class</td>
+                <td>h</td>
+                <td>d</td>
+                </tr> <tr style="background-color:#ffffcc">
+                <td>Self-similar</td>
+                <td>1/2</td>
+                <td>1</td>
+                </tr>
+                
+                <tr style="background-color:#b9d3ee;">
+                <td>Undirected random network</td>
+                <td>5/8 = 0.625</td>
+                <td>5/4</td>
+                </tr>
+                </table>
+            
+            <div style="float:left; margin-left:50px">
+            <img width="400px" src="./images/exponent_h.png">
+            </div>
+            <div style="float:right; margin-right:50px">
+            <img width="400px" src="./images/exponent_d.png">
+            </div>
+        </section>
+
+
+        <section data-background="#eee">
+            <h2><i>Summary</i></h2>   
+            <hr>
+            <ul> 
+                <li class="fragment" style="color:#999">Humid regions branch at ~72&#176;, while arid regions branch at ~45&#176;. </li>
+                <li class="fragment">These branching angles naturally produce basin aspect ratios in humid and arid environments.</li>
+                <li class="fragment">This self-similarity breaks down with increasing basin order due to self-affinity of humid regions.</li>
+            </ul>
+        </section>
+
+
+        <!-- Final remarks -->
+        <section data-background="#333">
+            <h1>Summary of results</h1>
+            <hr>
+            <ul>
+                <li class="fragment">Groundwater table produces a height-dependent diffusivity that creates a valley edge; theory incorporating this feature agrees with slow-advancing valley shapes. </li>
+                <li class="fragment">Streams migrate laterally in response to the groundwater field, producing a 120&#176; confluence and network-wide fluctuations in curvature.</li>
+                <li class="fragment">The 72&#176; branching angle associated with Laplacian growth produces a &pi;/5 aspect ratio, but this effect decreases with basin size due to basin self-affinity in humid environments.</li>
+            </ul>
+        </section>
+        
+         
+        <!-- Acknowledgments -->
+        <section data-background="#333">
+            <h1>Acknowledgments</h1>
+            For now, David, Yonatan, Chris, Eric [, Haitao]
+        </section>
+        
+        
+        <!-- Supplementary slides. --> 
+        <section data-background="#333">
+            <h1> Supplementary slides</h1>
+            <hr>
+        </section>
+        
+        <section data-background="#666">
+            <h2><i>Valley supplementary slides</i></h2>
+        </section>
+        <section>
+            <h2>Conformal map for valley solution</h2>
+            <img width="600px" src="./images/mmw_map.png">
+        </section>
+        <section>
+            <h2>Verification of slow velocity</h2>
+            <p style="font-size:60%">The valleys we fit have slopes below the angle of repose.</p>
+            <img width="450px" src="./images/propvslength.png">
+        </section>
+        <section>
+            <h2>Additional valley fits</h2>
+            <div style="float:right: width:450px">
+            <img width="350px" src="./images/1150parabolic.png">
+            <p>Pelletier and Perron (2012)</p>
+            </div>
+        </section>
+
+        <section data-background="#666">
+            <h2><i>Rearrangement supplementary slides</i></h2>
+        </section>
+       
+        <section>
+            <img width="500px" src="./images/fluxjump_behavior.png">
+            <p>The behavior of flux jump <i>[Q]</i> as a function of distance from the junction <i>s</i>, for different values of junction angle &alpha;.</p>
+        </section>
+        
+        <section>
+            <h2>Laplace's equation</h2>
+            <p><img width="180px" src="./images/equations/laplace.png"></p>
+            <p>Allows us to bend the field in any way we want.</p>
+            <img style="float:left; padding-left:50px" src="./images/sqrtmap_revised.png" width="350px"><img style="float:right; padding-right: 50px" src="./images/fishtail_map_diagram_modified.png" width="450px">
+        </section>
+
+        <section>
+        <h2>An outline of the proof</h2>
+            <img width="500px" src="./images/rhoc.png">
+        </section>
+
+
+        <section>
+            <h2>Model of migration</h2>
+            <p style="font-size:70%">We assume streams migrate at a velocity proportional to flux jump, with a regularizing curvature-dependent term. </p>
+            <p><img width="300px" src="./images/equations/migration.png"></p>
+            
+            <div style="float:left">
+            <img width="500px" src="./images/confluence_curvvsflux.png">
+            </div>
+            <div style="float:right; width:400px">
+            <p style="text-align:left; font-size:70%">Assume a statistical steady state where v<sub>m</sub> = 0. The inverse slope of this plot gives a characteristic difference in area drained on either side of the stream (2474 m<sup>2</sup>). </p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Network-wide field evidence</h2>
+            
+            <div style="float:left; margin-left:50px">
+            <img width="450px" src="./images/asymmetrycartoon.png"><br>
+            <img width="350px" src="./images/curvvsflux.png"><br> 
+            1/slope = 769 m<sup>2</sup>
+            </div> 
+            
+            <div style="float:right: margin-left: 50px">
+            <img width="350px" src="./images/slopenvsflux.png"><br>
+            <img width="350px" src="./images/curvvsslopen.png">
+            </div>
+        </section>
+       
+
+        <section data-background="#666">
+            <h2><i>Climate supplementary slides</i></h2>
+        </section>
+        <section>
+           <h2>Self-similarity</h2>
+           <img src="./images/L_vs_A_AI.png" width="600px">
+        </section>
+         
+        <section>
+        <h2>Order-dependence</h2>
+        <div style="width:100%; display:block">
+            <div style="float:left;">
+            <img width="400px" src="./images/aspect_ratio_order.png">
+            </div>
+            <div style="float:right; width:400px; text-align: left; font-size:80%">
+            Aspect ratio dependence on aridity persists for 2nd and 3rd order Horton-ordered basins, but disappears for 4th and higher. 
+            </div>
+        </div>
+        <div style="width:100%; clear:left">
+            <div style="float:left; margin-left: 50px" class="fragment"><img width="400px" src="./images/log_aspect_ratio_fit.png"></div>
+            <div style="float:right; margin-right:50px" class="fragment"><img width="350px" src="./images/log_aspect_ratio_fit_order.png"></div>
+        </div>
+
+    </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true, // Push each slide change to browser history.
+        controls: false, // Remove controls in bottom right corner.
+        transitionSpeed: 'fast', 
+        transition: 'fade', // Make all transitions fade transitions by default. 
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
